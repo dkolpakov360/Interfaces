@@ -20,21 +20,21 @@ a. Создайте следующие интерфейсы
 
 b. Создайте класс импорта Import, со свойствами $reader, $writer и $converters = []
 
-public function from(Reader $reader) - устанавливает значение свойства $reader и возвращает
+- public function from(Reader $reader) - устанавливает значение свойства $reader и возвращает
 $this  
 
-public function to(Writer $writer) - устанавливает значение свойства $writer и возвращает
+- public function to(Writer $writer) - устанавливает значение свойства $writer и возвращает
 $this  
 
-public function with(Converter $converter) - Добавляет конвертер в свойство $converters и
+- public function with(Converter $converter) - Добавляет конвертер в свойство $converters и
 возвращает $this  
 
-public function execute() - производит импорт/экспорт данных из $reader в $writer  
+- public function execute() - производит импорт/экспорт данных из $reader в $writer  
 
 c. Реализуйте описанные методы.
 
-d. Согласно разработанному коду импорт можно произвести, примерно, такой конструкцией
-(new Import()) // Создаем новый объект - импорт
+d. Согласно разработанному коду импорт можно произвести, примерно, такой конструкцией (new Import()) // Создаем новый объект - импорт
+
 ->from(new YourReader()) // Регистрируем в импорте reader - как будем читать  
 ->to(new YourWriter()) // Регистрируем в импорте writer - куда будем писать  
 ->with(new YourConverter()) // Регистрируем в импорте сколько угодно конвертеров - как данные будут обработаны перед записью   
